@@ -3,3 +3,6 @@ workflows:
   - name: phASER
     subclass: WDL
     primaryDescriptorPath: /phaser/phaser.wdl
+  - name: ASEReadCounter
+    subclass: WDL
+    primaryDescriptorPath: /ASEReadCounter/asereadcounter.wdl
