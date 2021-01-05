@@ -65,14 +65,14 @@ task phaser_gene_ae {
     File counts
     File bed
     String out_prefix
+    #   Generate default values
+    String outname = "${out_prefix}_gene_ae.txt"
     #   Documentation for parameters
     parameter_meta {
         counts: "The haplotypic counts generated from `phaser.py`"
         bed: "BED file with features to produce counts for"
         out_prefix: "Prefix for names of output files"
     }
-    #   Generate default values
-    String outname = "${out_prefix}_gene_ae.txt"
     #   Run phASER gene ae
     command {
         phaser_gene_ae.py --haplotypic_counts ${counts} --features ${bed} --o ${outname}
@@ -102,6 +102,9 @@ workflow run_phaser {
     Int baseq = 10
     String sample = ""
     Boolean pass_only = false
+    #   Generate default values
+    String out_prefix = basename(bam, ".bam")
+    String sample_name = if (sample == "") then out_prefix else sample
     #   Documentation for parameters
     parameter_meta {
         bam: "RNA-seq BAM file to run phASER on"
@@ -117,9 +120,6 @@ workflow run_phaser {
         sample: "Sample name as present in `vcf`; defaults to the basename of `bam`"
         pass_only: "Limit `vcf` to variantes that have passed quality filters; defaults to false"
     }
-    #   Generate default values
-    String out_prefix = basename(bam, ".bam")
-    String sample_name = if (sample == "") then out_prefix else sample
     #   Run tasks
     call phaser {
         input:
