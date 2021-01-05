@@ -74,7 +74,7 @@ Run `phaser_gene_ae.py` on a sample. For more details about `phaser_gene_ae`, pl
 
  - File `counts`: the haplotypic counts generated from `phaser.py`
  - File `bed`: BED file with features to produce counts for
- - String `out_prefix`: refix for names of output files
+ - String `out_prefix`: prefix for name of output file
 
 #### Outputs
 
