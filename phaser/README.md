@@ -63,7 +63,7 @@ Run `phaser.py` on a sample. For more details about `phaser.py`, please see [the
 
 #### Runtime
 
-This workflow utilizes a pre-built Docker image hosted on the [Lappalainen Lab GitHub Packages](https://github.com/orgs/LappalainenLab/packages/container/package/phaser) page. In compute environments, this task requires 10 GB of memory
+This task utilizes a pre-built Docker image hosted on the [Lappalainen Lab GitHub Packages](https://github.com/orgs/LappalainenLab/packages/container/package/phaser) page. In compute environments, this task requires 10 GB of memory
 
 
 ### Task `phaser_gene_ae`
@@ -82,4 +82,4 @@ Run `phaser_gene_ae.py` on a sample. For more details about `phaser_gene_ae`, pl
 
 #### Runtime
 
-This workflow utilizes a pre-built Docker image hosted on the [Lappalainen Lab GitHub Packages](https://github.com/orgs/LappalainenLab/packages/container/package/phaser) page. In compute environments, this task requires 10 GB of memory
+This task utilizes a pre-built Docker image hosted on the [Lappalainen Lab GitHub Packages](https://github.com/orgs/LappalainenLab/packages/container/package/phaser) page. In compute environments, this task requires 10 GB of memory
